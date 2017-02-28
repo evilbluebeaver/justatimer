@@ -1,0 +1,15 @@
+{application, 'justatimer',
+ [{description, "Just a wrap for erlang:send_after and erlang:cancel_timer"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {contributors, []},
+  {licenses, []},
+  {links, []}
+ ]}.
