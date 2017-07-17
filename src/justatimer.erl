@@ -4,6 +4,7 @@
          start/1,
          restart/1,
          restart/2,
+         restart/3,
          stop/1]).
 
 -record(justatimer, {ref :: reference() | undefined,
@@ -38,6 +39,13 @@ start(Timer) ->
 -spec restart(Timeout :: non_neg_integer(), Timer :: justatimer()) -> justatimer().
 restart(Timeout, Timer) ->
     restart(Timer#justatimer{timeout=Timeout}).
+
+%% @doc
+%% Restarts the timer with the new timeout and message. If the timer hasn't been started it will be started.
+%% @end
+-spec restart(Msg :: term(), Timeout :: non_neg_integer(), Timer :: justatimer()) -> justatimer().
+restart(Msg, Timeout, Timer) ->
+    restart(Timer#justatimer{msg=Msg, timeout=Timeout}).
 
 %% @doc
 %% Restarts the timer with the old timeout. If the timer hasn't been started it will be started.
