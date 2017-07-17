@@ -76,6 +76,8 @@ test_restart(_Config) ->
     false = (Timer1 == Timer2),
     Timer3 = justatimer:restart(10, Timer2),
     false = (Timer2 == Timer3),
+    Timer4 = justatimer:restart(msg, 10, Timer3),
+    false = (Timer3 == Timer4),
     receive
         msg ->
             ok
