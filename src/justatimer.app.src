@@ -1,6 +1,6 @@
 {application, 'justatimer',
  [{description, "Just a wrap for erlang:send_after and erlang:cancel_timer"},
-  {vsn, "0.1.1"},
+  {vsn, "0.1.2"},
   {registered, []},
   {applications,
    [kernel,
@@ -11,5 +11,5 @@
 
   {contributors, []},
   {licenses, []},
-  {links, []}
+  {links, [{"GitHub", "https://github.com/evilbluebeaver/justatimer"}]}
  ]}.
